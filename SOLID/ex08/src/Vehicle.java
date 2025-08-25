@@ -1,5 +1,3 @@
+// Marker interface for all vehicles
 public interface Vehicle {
-    void startEngine();
-    void pedal(int effort);
-    void recharge(int kWh);
 }
