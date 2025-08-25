@@ -1,7 +1,8 @@
-
-
 public class Demo01 {
     public static void main(String[] args) {
-        new OrderService().checkout("a@shop.com", 100.0);
+        PaymentProcessor payment = new SimplePaymentProcessor();
+        Notifier notifier = new EmailNotifier();
+        OrderService orderService = new OrderService(payment, notifier);
+        orderService.checkout("a@shop.com", 100.0);
     }
 }
